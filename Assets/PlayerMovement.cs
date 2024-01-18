@@ -7,6 +7,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
+
     private Vector2 movement;
     public Vector2 mousePos;
 
@@ -37,7 +38,7 @@ public class NewBehaviourScript : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.x, lookDir.y) * Mathf.Rad2Deg + 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
     }
 
