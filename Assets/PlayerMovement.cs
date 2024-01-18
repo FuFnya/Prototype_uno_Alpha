@@ -8,6 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
+    public float PHilip
 
     // Update is called once per frame
     void Update()
