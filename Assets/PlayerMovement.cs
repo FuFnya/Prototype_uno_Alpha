@@ -7,8 +7,12 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
-    private Vector2 moveDirection;
-    
+    private Vector2 movement;
+    public Vector2 mousePos;
+
+    public Camera cam;
+
+
 
     // Update is called once per frame
     void Update()
@@ -22,15 +26,19 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void ProcessInputs()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.x, lookDir.y) * Mathf.Rad2Deg + 90f;
+        rb.rotation = angle;
     }
 
 
