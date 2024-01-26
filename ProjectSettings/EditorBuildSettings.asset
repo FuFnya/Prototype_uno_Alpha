@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Settings/Scenes/New Scene.unity
+    path: Assets/Settings/Scenes/Level2.unity
     guid: 75134dc3cff67cb43969034bcd7e258c
   m_configObjects: {}
