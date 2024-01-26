@@ -11,8 +11,12 @@ public class NewBehaviourScript : MonoBehaviour
 
     private Vector2 movement;
     public Vector3 mousePos;
+    public VectorValue startingPos;
 
-
+    void Start()
+    {
+        transform.position = startingPos.InitValue;
+    }
 
     // Update is called once per frame
     void Update()

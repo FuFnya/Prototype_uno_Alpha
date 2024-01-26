@@ -3113,8 +3113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1610379867}
-  mousePos: {x: 0, y: 0}
-  cam: {fileID: 0}
+  mousePos: {x: 0, y: 0, z: 0}
+  startingPos: {fileID: 11400000, guid: 45e7c46a4e9737d469051e858a4e5cac, type: 2}
 --- !u!50 &1610379867
 Rigidbody2D:
   serializedVersion: 4
