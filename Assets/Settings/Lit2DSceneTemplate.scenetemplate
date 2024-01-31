@@ -66,35 +66,61 @@ MonoBehaviour:
     the 2D Renderer in Universal RP.
   preview: {fileID: -3604256930052969394}
   dependencies:
+  - dependency: {fileID: 5859094511949426733, guid: a247a755209835742bee57008e2194cd, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: c5eda2e2503ffb049875604cfbdab5e2, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 3523394190953293605, guid: 8858bcaf821a34d46b751c8e8c530738, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 11400000, guid: 2178fff16b133c4489047ada510818f2, type: 2}
+  - dependency: {fileID: 11400000, guid: 726be785cb8f2124fbed0b43e6548abd, type: 2}
     instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: ab063d216189f4d49abbf22fc2dfb261, type: 3}
+  - dependency: {fileID: 7400000, guid: 0c47c0f1111190d409f1adda0b43e11a, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: adc7886bc804dca48a535d811bf985a1, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 7400000, guid: 998a10c2c84f8c942bba34536e3a0ad4, type: 2}
-    instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: ad4634903bc9197419fa406225858c73, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 7400000, guid: 0c47c0f1111190d409f1adda0b43e11a, type: 2}
-    instantiationMode: 0
   - dependency: {fileID: 9100000, guid: 8c334957dd759f841a77a43c1dedf022, type: 2}
-    instantiationMode: 0
-  - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: b3e633a7357eb7f42a8165ba3605dd9b, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 11400000, guid: 45e7c46a4e9737d469051e858a4e5cac, type: 2}
+  - dependency: {fileID: 9100000, guid: 45dc8a5d5420e2d4f9fdc342e1ae387a, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 8f43995d9fc4f7d4abc4eeaee2f9c468, type: 2}
     instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: 49e6afb67169f1347b4524190dacda8e, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 7996288872853845963, guid: 9fd741219047fbd42b3a420ea2cb8470, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 11400000, guid: 3c8d15e341dae9046a2d69360866cfb4, type: 2}
     instantiationMode: 1
-  - dependency: {fileID: 7400000, guid: e4071dd9bf504c04a839785482ecbac6, type: 2}
+  - dependency: {fileID: 3523394190953293605, guid: 8858bcaf821a34d46b751c8e8c530738, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: 414ef9ffc8348fc48b12bf6c2f62355c, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ab063d216189f4d49abbf22fc2dfb261, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ad4634903bc9197419fa406225858c73, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: 998a10c2c84f8c942bba34536e3a0ad4, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: eea086cc34a4e6346a43afcf9d632d9a, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: e3dca6d780ce083479c37d407209aa8c, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: cd51eb7beb222fa47828f05ce60c3922, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 45e7c46a4e9737d469051e858a4e5cac, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: e33d42a36029d6545b82ba3e3e73f73f, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 8194951320502823787, guid: 97a465e3c256c8448946806e230914dc, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: abf07b8ceaeec014c9ad4945cd07298a, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: e2cbb8df8c281f84e807ad860fbc1158, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ee585b036cd8edd4592ba349cdb2acda, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 7400000, guid: e4071dd9bf504c04a839785482ecbac6, type: 2}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
   badge: {fileID: 0}
