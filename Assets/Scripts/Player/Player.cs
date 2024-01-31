@@ -13,6 +13,11 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
     private bool dead = false;
 
+    public void Awake()
+    {
+        //DontDestroyOnLoad(this);
+    }
+
     public void GetHit(int damage, GameObject damageDealer)
     {
         if (dead) return;
@@ -24,5 +29,10 @@ public class Player : MonoBehaviour, IAgent, IHittable
             OnDie?.Invoke();
             dead = true;
         }
+    }
+
+    public void OnDeath()
+    {
+        Destroy(gameObject);
     }
 }

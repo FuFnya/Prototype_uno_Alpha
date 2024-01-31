@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class DestroyAfterImpact : MonoBehaviour
 {
-    public void DestroyAfterAnimation()
+    private void Awake()
     {
         Destroy(gameObject);
     }
+
+    /*public void DestroyAfterAnimation()
+    {
+        Destroy(gameObject);
+    }*/
 }

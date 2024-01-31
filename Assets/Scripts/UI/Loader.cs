@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
@@ -15,12 +16,11 @@ public static class Loader
     }
 
     public static Scene targetScene;
+    public static GameObject keepObjects;
 
     public static void load(Scene targetScene)
     {
         Loader.targetScene = targetScene;
-
-
         SceneManager.LoadScene(Scene.Loader.ToString());
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1029852407760055650}
   - component: {fileID: 5416237001168445440}
   m_Layer: 3
-  m_Name: MovmentCollider
+  m_Name: MovementCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,9 +64,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2968955, y: -1.0633359}
-  m_Size: {x: 2.9709513, y: 2.9709513}
-  m_Direction: 0
+  m_Offset: {x: -0.29689637, y: -1.0633364}
+  m_Size: {x: 2.4500742, y: 1.5385387}
+  m_Direction: 1
 --- !u!1 &3726508229963081074
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,8 +387,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195238598911668767}
-  - component: {fileID: 7553556674090993026}
-  - component: {fileID: 8031206926906237981}
   m_Layer: 3
   m_Name: FeedbackDeath
   m_TagString: Untagged
@@ -411,49 +409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8332338115291168823}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7553556674090993026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6390526242370431046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a37d1d5dc3e345448522d6178883ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feedbackToPlay:
-  - {fileID: 0}
---- !u!114 &8031206926906237981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6390526242370431046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0452ec3613ada3a43ad6eb4ea58c2b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  duration: 0.05
-  <DealthCallback>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6200113920117320397, guid: a247a755209835742bee57008e2194cd, type: 3}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: Die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &6550283914290856991
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +420,7 @@ GameObject:
   - component: {fileID: 1082676511370676441}
   - component: {fileID: 7073883255919995121}
   - component: {fileID: 2850603820720294778}
+  - component: {fileID: 8285104698337093525}
   m_Layer: 0
   m_Name: FeedbackHit
   m_TagString: Untagged
@@ -517,6 +473,21 @@ MonoBehaviour:
   freezeTimeDelay: 0.01
   unfreezeTimeDelay: 0.02
   timeFreezeValue: 0.1
+--- !u!114 &8285104698337093525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550283914290856991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7966c0fe55c07574591ca782aec3be68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2788384448203443362}
+  flashTime: 0.1
+  flashMaterial: {fileID: 0}
 --- !u!1 &6710996974491922125
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +836,19 @@ MonoBehaviour:
       m_Calls: []
   <OnDie>k__BackingField:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2702102694364807394}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7797385320224584811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,7 +866,7 @@ MonoBehaviour:
   <OnFireButtonPressed>k__BackingField:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2702102694364807394}
         m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: PerformAttack
         m_Mode: 1
@@ -1000,8 +983,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01768136, y: -0.061884224}
-  m_Size: {x: 0.74753714, y: 1.1237684}
+  m_Offset: {x: 0.0048077106, y: -0.15200323}
+  m_Size: {x: 0.72178984, y: 1.3139998}
   m_Direction: 0
 --- !u!1 &8564660843645980931
 GameObject:
