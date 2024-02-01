@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Player : MonoBehaviour, IAgent, IHittable
 {
     [field: SerializeField]
     public int Health { get; set; } = 5;
+
+    [field: SerializeField]
+    private Image healthBar;
+
     [field: SerializeField]
     public UnityEvent OnDie { get; set; }
     [field: SerializeField]
@@ -24,7 +29,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
 
         Health--;
         OnGetHit?.Invoke();
-        if(Health <= 0)
+        healthBar.fillAmount = Health / 5f;
+        if (Health <= 0)
         {
             OnDie?.Invoke();
             dead = true;
