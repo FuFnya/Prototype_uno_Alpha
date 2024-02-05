@@ -37,6 +37,13 @@ public class Player : MonoBehaviour, IAgent, IHittable
         }
     }
 
+    public void GetHeal(int heal)
+    {
+        if (dead) return;
+        Health++;
+        healthBar.fillAmount = Health / 5f;
+    }
+
     public void OnDeath()
     {
         Destroy(gameObject);
