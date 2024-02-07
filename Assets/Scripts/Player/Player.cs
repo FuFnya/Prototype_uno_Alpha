@@ -9,6 +9,9 @@ public class Player : MonoBehaviour, IAgent, IHittable
     public int Health { get; set; } = 5;
 
     [field: SerializeField]
+    public int MAX_HEALTH { get; set; } = 5;
+
+    [field: SerializeField]
     private Image healthBar;
 
     [field: SerializeField]
@@ -27,9 +30,9 @@ public class Player : MonoBehaviour, IAgent, IHittable
     {
         if (dead) return;
 
-        Health--;
+        Health -= damage;
         OnGetHit?.Invoke();
-        healthBar.fillAmount = Health / 5f;
+        healthBar.fillAmount = Health / (float)MAX_HEALTH;
         if (Health <= 0)
         {
             OnDie?.Invoke();
@@ -40,8 +43,8 @@ public class Player : MonoBehaviour, IAgent, IHittable
     public void GetHeal(int heal)
     {
         if (dead) return;
-        Health++;
-        healthBar.fillAmount = Health / 5f;
+        Health += heal;
+        healthBar.fillAmount = Health / (float)MAX_HEALTH;
     }
 
     public void OnDeath()

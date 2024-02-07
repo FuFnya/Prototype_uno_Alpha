@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3ddaeeddadbe18438b7889e7f1d929b, type: 3}
-  m_Name: Goblin
+  m_Script: {fileID: 11500000, guid: 988181a74f4af0c45812d26fab1b678e, type: 3}
+  m_Name: Heart
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 3
-  <Damage>k__BackingField: 1
-  <DropTable>k__BackingField:
-  - {fileID: 0}
+  amount: 2

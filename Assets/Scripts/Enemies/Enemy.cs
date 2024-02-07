@@ -21,6 +21,9 @@ public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
 
     private bool dead = false;
 
+    [field: SerializeField]
+    private GameObject[] drops;
+
     public EnemyAttack enemyAttack { get; set; }
 
     private void Awake()
@@ -53,6 +56,7 @@ public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
     public void Die()
     {
         Destroy(gameObject);
+        ItemDrop();
     }
 
 
@@ -65,5 +69,13 @@ public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
     public void KnockBack(Vector2 direction, float power, float duration)
     {
         agentMovement.KnockBack(direction, power, duration);
+    }
+
+    public void ItemDrop()
+    {
+        foreach (GameObject i in drops)
+        {
+            Instantiate(i, transform.position, Quaternion.identity);
+        }
     }
 }

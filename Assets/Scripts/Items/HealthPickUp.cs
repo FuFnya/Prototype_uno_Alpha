@@ -11,7 +11,12 @@ public class HealthPickUp : CollidableObject
     protected override void OnCollided(GameObject collidedObject)
     {
         if (collidedObject == null) return;
-        FindObjectOfType<Player>().gameObject.GetComponent<Player>().GetHeal(1);
-        Destroy(this.gameObject);
+        //FindObjectOfType<Player>().gameObject.GetComponent<Player>().GetHeal(1);
+        Player player = FindObjectOfType<Player>().gameObject.GetComponent<Player>();
+        if (player.MAX_HEALTH > player.Health)
+        {
+            OnPickUp?.Invoke();
+            Destroy(this.gameObject);
+        }
     }
 }
