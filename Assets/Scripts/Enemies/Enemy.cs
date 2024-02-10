@@ -55,8 +55,8 @@ public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
 
     public void Die()
     {
-        Destroy(gameObject);
         ItemDrop();
+        Destroy(gameObject);
     }
 
 
@@ -76,6 +76,10 @@ public class Enemy : MonoBehaviour, IHittable, IAgent, IKnockBack
         foreach (GameObject i in drops)
         {
             Instantiate(i, transform.position, Quaternion.identity);
+
+            float dropForce = 150f;
+            Vector2 dropDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            i.GetComponent<Rigidbody2D>().AddForce(dropDir * dropForce, ForceMode2D.Impulse);
         }
     }
 }

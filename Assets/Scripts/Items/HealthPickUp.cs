@@ -6,16 +6,15 @@ using UnityEngine.Events;
 public class HealthPickUp : CollidableObject
 {
     [SerializeField]
-    private UnityEvent OnPickUp;
+    private int heal;
 
     protected override void OnCollided(GameObject collidedObject)
     {
         if (collidedObject == null) return;
-        //FindObjectOfType<Player>().gameObject.GetComponent<Player>().GetHeal(1);
-        Player player = FindObjectOfType<Player>().gameObject.GetComponent<Player>();
-        if (player.MAX_HEALTH > player.Health)
+
+        if (collidedObject.GetComponent<Player>().MAX_HEALTH > collidedObject.GetComponent<Player>().Health)
         {
-            OnPickUp?.Invoke();
+            collidedObject.GetComponent<Player>().GetHeal(heal);
             Destroy(this.gameObject);
         }
     }
